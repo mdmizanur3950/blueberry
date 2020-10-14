@@ -1,0 +1,1231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+   <!-- Font Awesome  -->
+   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+   <!-- Chart js -->
+   <script src="js/Chart.min.js"></script>
+
+   <!-- Highchart js -->
+   <script src="js/highcharts.js"></script>
+
+
+   <!-- Main CSS File -->
+   <link rel="stylesheet" href="css/style.css">
+   <title>Property Evaluation</title>
+</head>
+<body>
+
+   <!-- Page 1 Start -->
+   <section class="page1">
+      <div class="container">
+         <div class="row mb-large">
+            <div class="col-12">
+               <img src="image/logo.png" alt="" class="img-fluid">
+            </div>
+         </div>
+         <div class="row mb-huge">
+            <div class="col-12">
+               <i class="fa fa-map-marker red"></i>
+               <ul class="address">
+                  <li>Ufnaustr.6
+                  <li>10553 Berlin</li>
+                  <li>Germany</li>
+               </ul>
+               <ul class="property">
+                  <li>span 65 m<sup>2</sup></li>
+                  <li>3 Rooms</li>
+                  <li>4th Floor</li>
+                  <li>Newly Renovated</li>
+                  <li>Luxurious</li>
+                  <li>1 Bathroom</li>
+                  <li>Balcony</li>
+                  <li>Storage</li>
+               </ul>
+            </div>
+         </div>
+
+         <div class="row mb-large">
+            <div class="col-12">
+               <img src="image/icons/valuation.png" alt="" class="img-fluid mb-normal section-icons">
+               <h1 class="text-uppercase title">1. Property Evaluation</h1>
+               <p class="text-uppercase text-bold">Blueberry Analytics analyzes comparable offers on the market to predict how much your real estate is worth</p>
+            </div>
+         </div>
+
+         <div class="row mb-huge">
+            <div class="col-12 text-center">
+               <h2 class="mb-large">Blueberry Analytics Price Estimate</h2>
+            </div>
+            <div class="col-4">
+               <div class="legend-box">
+                  <ul>
+                     <li><span class="legend-box1"></span>Low End Price</li>
+                     <li><span class="legend-box2"></span>Most Likely Price</li>
+                     <li><span class="legend-box3"></span>High-end Price</li>
+                  </ul>
+               </div>
+            </div>
+            <div class="col-8">
+               <img src="image/page1/graph3.jpg" alt="" class="img-fluid">
+            </div>
+            <div class="col-12 text-center">
+               <h4 class="rental">Growth Rental Yield: 4.56%</h4>
+            </div>
+         </div>
+
+         <div class="row mb-huge">
+            <div class="col-12 text-center">
+               <h2 class="mb-large">Price/m<sup>2</sup></h2>
+            </div>
+            <div class="col-4">
+               <div class="legend-box">
+                  <img src="image/page1/speedometer.png" alt="" class="img-fluid mb-normal">
+                  <h5>Confidence of Estimate:</h5>
+                  <p class="text-bold">Very Good ( 85% )</p>
+               </div>
+            </div>
+            <div class="col-8">
+               <img src="image/page1/graph2.jpg" alt="" class="img-fluid">
+            </div>
+         </div>
+
+         <div class="row mb-huge">
+            <div class="col-12 text-center">
+               <h2 class="mb-large">Blueberry Analytics Rental Income Estimate</h2>
+            </div>
+            <div class="col-4">
+               <div class="legend-box">
+                  <ul>
+                     <li><span class="legend-box1"></span>Low End Rent</li>
+                     <li><span class="legend-box2"></span>Most Likely Rent</li>
+                     <li><span class="legend-box3"></span>High-end rent</li>
+                  </ul>
+               </div>
+               <div class="legend-box">
+                  <img src="image/page1/speedometer.png" alt="" class="img-fluid mb-normal">
+                  <h5>Confidence of Estimate:</h5>
+                  <p class="text-bold">Very Good ( 85% )</p>
+               </div>
+            </div>
+            <div class="col-8">
+               <img src="image/page1/graph2.jpg" alt="" class="img-fluid">
+            </div>
+         </div>
+
+         <div class="row mb-huge">
+            <div class="col-12 text-center">
+               <h2 class="mb-large">Berlin Price Heatmap</h2>
+               <div class="imagebox">
+                  <img src="image/page1/heatmap.png" alt="" class="img-fluid">
+                  <img src="image/page1/Group 6.png" alt="" class="img-fluid legend">
+               </div>
+            </div>
+         </div>
+
+         <div class="row mb-huge">
+            <div class="col-12 text-center">
+               <h2 class="mb-large">Real Estate Price History ( €/m2 ) </h2>
+
+               <div class="price-comparison-box mb-large">
+                  <h3>Last Quarter Price Development</h3>
+                  <p>Your Property: <span class="text-bold"><i class="fa fa-long-arrow-up" aria-hidden="true"></i>10%</span></p>
+                   <p>All Berlin: <span class="text-bold"><i class="fa fa-long-arrow-down" aria-hidden="true"></i>7%</span></hp>
+
+                  <div class="chartbox">
+                     <div id="quarterly" style="height: 600px;"></div>
+                  </div>
+               </div>
+
+               <div class="price-comparison-box mb-large">
+                  <h3>Last Year Price Development</h3>
+                  <p>Your Property: <span class="text-bold"><i class="fa fa-long-arrow-up" aria-hidden="true"></i>15%</span></p>
+                   <p>All Berlin: <span class="text-bold"><i class="fa fa-long-arrow-down" aria-hidden="true"></i>10%</span></hp>
+
+                  <div class="chartbox">
+                     <div id="yearly" style="height: 600px;"></div>
+                  </div>
+               </div>
+
+               <div class="price-comparison-box mb-large">
+                  <h3>Last 5 Years Price Development</h3>
+                  <p>Your Property: <span class="text-bold"><i class="fa fa-long-arrow-up" aria-hidden="true"></i>100%</span></p>
+                   <p>All Berlin: <span class="text-bold"><i class="fa fa-long-arrow-down" aria-hidden="true"></i>70%</span></hp>
+
+                  <div class="chartbox">
+                     <div id="fiveyearly" style="height: 600px;"></div>
+                  </div>
+               </div>
+
+               
+
+               
+            </div>
+         </div>
+      </div>
+   </section>
+   <!-- Page 1 End -->
+   
+   <!-- Page2 Start -->
+   <section class="page2">
+      <div class="container">
+         <div class="row">
+            <div class="col-12">
+               <img src="image/icons/comparable.png" alt="" class="img-fluid mb-normal section-icons">
+               <h1 class="text-uppercase title">2. Comparables Analysis</h1>
+               <p class="text-uppercase text-bold">Blueberry Analytics considers time (date offer was first posted), space (distance to your property) and other features including, but not limited to, condition, furnishings, year of construction and rental status.</p>
+               <img src="image/page2/map.png" alt="Map" class="map-image img-fluid">
+               <div class="box">
+                  <h4>Your Property</h4>
+                  <table>
+                     <tr>
+                       <td class="text-bold text-uppercase">Address</td>
+                       <td>: Ufnaustr.6, 10553 Berlin</td>
+                     </tr>
+                     <tr>
+                        <td class="text-bold text-uppercase" >Blueberry Analytics <br> Price Estimate
+                           </td>
+                        <td>: 234,567€</td>
+                      </tr>
+                      <tr>
+                        <td class="text-bold text-uppercase">Price per sqm</td>
+                        <td>: 3608 €</td>
+                      </tr>
+                   </table>
+               </div>
+
+               <!-- property box 1 -->
+               <div class="property-box property-box1">
+                  <h3 class="text-uppercase text-bold">Comparable Property 1</h3>
+                  <table>
+                     <tr>
+                       <td class="text-bold text-uppercase">Address</td>
+                       <td>: Rostokerstr.4, 10553 Berlin</td>
+                     </tr>
+                     <tr>
+                        <td class="text-bold text-uppercase">Actual Offer Price
+                           </td>
+                        <td>:  245,000 €</td>
+                      </tr>
+                      <tr>
+                        <td class="text-bold text-uppercase">Price per sqm</td>
+                        <td>:  3700 €</td>
+                      </tr>
+                      <tr>
+                        <td class="text-bold text-uppercase">Distance to your propert</td>
+                        <td>: 400m</td>
+                      </tr>
+                      <tr>
+                         <td class="text-bold text-uppercase">Time on Market
+                            </td>
+                         <td>:  6 Weeks</td>
+                       </tr>
+                       <tr>
+                        <td class="text-bold text-uppercase">Offer Date
+                           </td>
+                        <td>:  Sept.1 2020</td>
+                      </tr>
+                       <tr>
+                         <td class="text-bold text-uppercase">Similarities</td>
+                         <td>:  <span class="highlight">4th floor</span> <span class="highlight">luxurious</span> </td>
+                       </tr>
+                   </table>
+               </div>
+
+               <!-- Property Box 2 -->
+               <div class="property-box property-box1">
+                  <h3 class="text-uppercase text-bold">Comparable Property 2</h3>
+                  <table>
+                     <tr>
+                       <td class="text-bold text-uppercase">Address</td>
+                       <td>: Gausstr.10, 10553 Berlin</td>
+                     </tr>
+                     <tr>
+                        <td class="text-bold text-uppercase">Actual Offer Price
+                           </td>
+                        <td>:  545,000 €</td>
+                      </tr>
+                      <tr>
+                        <td class="text-bold text-uppercase">Price per sqm</td>
+                        <td>:  5000 €</td>
+                      </tr>
+                      <tr>
+                        <td class="text-bold text-uppercase">Distance to your propert</td>
+                        <td>: 480m</td>
+                      </tr>
+                      <tr>
+                         <td class="text-bold text-uppercase">Offer Date
+                            </td>
+                         <td>:  Sept.1 2020</td>
+                       </tr>
+                       <tr>
+                        <td class="text-bold text-uppercase">Time on Market
+                           </td>
+                        <td>:  3 Weeks</td>
+                      </tr>
+                       <tr>
+                         <td class="text-bold text-uppercase">Similarities</td>
+                         <td>: <span class="highlight">Newly Renovated</span> <span class="highlight">Balcony</span></td>
+                       </tr>
+                   </table>
+               </div>
+
+               <!-- Property Box 3 -->
+               <div class="property-box property-box1">
+                  <h3 class="text-uppercase text-bold">Comparable Property 3</h3>
+                  <table>
+                     <tr>
+                       <td class="text-bold text-uppercase">Address</td>
+                       <td>:  Berlichenstr.10, 10553 Berlin</td>
+                     </tr>
+                     <tr>
+                        <td class="text-bold text-uppercase">Actual Offer Price
+                           </td>
+                        <td>:  345,000 €</td>
+                      </tr>
+                      <tr>
+                        <td class="text-bold text-uppercase">Price per sqm</td>
+                        <td>:  3500 €</td>
+                      </tr>
+                      <tr>
+                        <td class="text-bold text-uppercase">Distance to your propert</td>
+                        <td>: 1km</td>
+                      </tr>
+                      <tr>
+                         <td class="text-bold text-uppercase">Offer Date
+                            </td>
+                         <td>:  Aug.1 2020</td>
+                       </tr>
+                       <tr>
+                        <td class="text-bold text-uppercase">Time on Market
+                           </td>
+                        <td>:  8 Weeks</td>
+                      </tr>
+                       <tr>
+                         <td class="text-bold text-uppercase">Similarities</td>
+                         <td>: <span class="highlight">Built-in Kitchen</span> <span class="highlight">Balcony</span></td>
+                         
+                       </tr>
+                   </table>
+               </div>
+
+               <!-- property box 4 -->
+               <div class="property-box property-box1">
+                  <h3 class="text-uppercase text-bold">Comparable Property 4</h3>
+                  <table>
+                     <tr>
+                       <td class="text-bold text-uppercase">Address</td>
+                       <td>:  Sickingenstr.6, 10553 Berlin</td>
+                     </tr>
+                     <tr>
+                        <td class="text-bold text-uppercase">Actual Offer Price
+                           </td>
+                        <td>:  341,000 €</td>
+                      </tr>
+                      <tr>
+                        <td class="text-bold text-uppercase">Price per sqm</td>
+                        <td>:  3800 €</td>
+                      </tr>
+                      <tr>
+                        <td class="text-bold text-uppercase">Distance to your propert</td>
+                        <td>: 300m</td>
+                      </tr>
+                      <tr>
+                         <td class="text-bold text-uppercase">Offer Date
+                            </td>
+                         <td>:  Aug.1 2020</td>
+                       </tr>
+                       <tr>
+                        <td class="text-bold text-uppercase">Time on Market
+                           </td>
+                        <td>:  4 Weeks</td>
+                      </tr>
+                       <tr>
+                         <td class="text-bold text-uppercase">Similarities</td>
+                         
+                         <td>: <span class="highlight">Balcony</span></td>
+                       </tr>
+                   </table>
+               </div>
+
+               <!-- property box 5 -->
+               <div class="property-box property-box1">
+                  <h3 class="text-uppercase text-bold">Comparable Property 5</h3>
+                  <table>
+                     <tr>
+                       <td class="text-bold text-uppercase">Address</td>
+                       <td>:  Sickingenstr.6, 10553 Berlin</td>
+                     </tr>
+                     <tr>
+                        <td class="text-bold text-uppercase">Actual Offer Price
+                           </td>
+                        <td>:  341,000 €</td>
+                      </tr>
+                      <tr>
+                        <td class="text-bold text-uppercase">Price per sqm</td>
+                        <td>:  3800 €</td>
+                      </tr>
+                      <tr>
+                        <td class="text-bold text-uppercase">Distance to your propert</td>
+                        <td>: 300m</td>
+                      </tr>
+                      <tr>
+                         <td class="text-bold text-uppercase">Offer Date
+                            </td>
+                         <td>:  Aug.1 2020</td>
+                       </tr>
+                       <tr>
+                        <td class="text-bold text-uppercase">Time on Market
+                           </td>
+                        <td>:  5 Weeks</td>
+                      </tr>
+                       <tr>
+                         <td class="text-bold text-uppercase">Similarities</td>
+                         <td>: <span class="highlight">Balcony</span></td>
+                       </tr>
+                   </table>
+               </div>
+            </div>
+         </div>
+      </div>
+   </section>
+
+   <!-- Page 2 Ends -->
+
+
+   <!-- Page 3 Starts -->
+
+   <section class="page3">
+      <div class="container">
+         <div class="row mb-medium">
+            <div class="col-12">
+               <img src="image/icons/neighbourhood.png" alt="" class="img-fluid mb-normal section-icons">
+               <h1 class="text-uppercase title">3. Neighbuorhood & Livability</h1>
+               <p class="text-uppercase text-bold">Blueberry Analytics scans your neighbourhood to assess how it would be to live there. We collate transportation, shopping, education, health, fitness and dining data in your immediate property area<sub><a href="#footnote1">1</a></sub>  and compare that to the Berlin average<sub><a href="#footnote2">2</a></sub></p>
+            </div>
+         </div>
+
+         <div class="row mb-huge">
+            <div class="col-12">
+               <table class="main-table">
+                  <tr>
+                     <td><img src="image/page3/icons/train.png" alt="Transportation"></td>
+                     <td>Shopping</td>
+                     <td>Property area has <span class="green">25%</span> more shopping opportunities than average in Berlin</td>
+                  </tr>
+                  <tr>
+                     <td><img src="image/page3/icons/education.png" alt="Education"></td>
+                     <td>Education </td>
+                     <td>Property area has <span class="red">7%</span> less educational facilities nearby than average in Berlin</td>
+                  </tr>
+                  <tr>
+                     <td><img src="image/page3/icons/health.png" alt="health"></td>
+                     <td>Health</td>
+                     <td>Property area has <span class="green">18%</span> more health services nearby than average in Berlin</td>
+                  </tr>
+                  <tr>
+                     <td><img src="image/page3/icons/gym.png" alt="Fitness"></td>
+                     <td>Fitness</td>
+                     <td>Property area is <span class="green">23%</span> more Fitness facilities than average in Berlin</td>
+                  </tr>
+                  <tr>
+                     <td><img src="image/page3/icons/restaurant.png" alt="Restaurants"></td>
+                     <td>Top-rated Restaurants</td>
+                     <td>Property area is <span class="green">18%</span>  better connected than average in Berlin</td>
+                  </tr>
+               </table>
+            </div>
+         </div>
+
+         <div class="row mb-huge">
+            <div class="col-12">
+               <table>
+                  <tr>
+                     <td><img src="image/page3/icons/train.png" alt="Public Transportation" class="small-image"></td>
+                     <td><h3>Public Transportation</h3></td>
+                  </tr>
+                  <tr>
+                     <td></td>
+                     <td><p class="text-bold">Busses, S-bahn and U-bahn connections in your property area</p></td>
+                  </tr>
+               </table>
+               
+            </div>
+            <div class="col-12 mb-large">
+               <img src="image/page3/maps/public_transportation.jpg" alt="Public Transportation Map" class="img-fluid map-image">
+            </div>
+
+            <div class="col-12">
+               <table class="secondary-table">
+                  <tr>
+                     <th class="text-bold">No.</th>
+                     <th class="text-bold">Destination</th>
+                     <th class="text-bold">Distance</th>
+                     <th><img src="image/page3/icons/car.png" alt="Car"></th>
+                     <th><img src="image/page3/icons/cycling.png" alt="Cycle"></th>
+                     <th><img src="image/page3/icons/walking.png" alt="Walking"></th>
+                  </tr>
+                  <tr>
+                     <td>1</td>
+                     <td>Bus Station 1</td>
+                     <td>500 m</td>
+                     <td>-</td>
+                     <td>2 min</td>
+                     <td>10 min</td>
+                  </tr>
+                  <tr>
+                     <td>2</td>
+                     <td>U Bahn</td>
+                     <td>1.2 km</td>
+                     <td>5 min</td>
+                     <td>10 min</td>
+                     <td>-</td>
+                  </tr>
+                  <tr>
+                     <td>3</td>
+                     <td>S Bahn</td>
+                     <td>400 m</td>
+                     <td>2 min</td>
+                     <td>2 min</td>
+                     <td>-</td>
+                  </tr>
+                  <tr>
+                     <td>4</td>
+                     <td>Bus Station 2</td>
+                     <td>800 m</td>
+                     <td>4 min</td>
+                     <td>8 min</td>
+                     <td>-</td>
+                  </tr>
+                  <tr>
+                     <td>5</td>
+                     <td>Bus Station 3</td>
+                     <td>900 m</td>
+                     <td>5 min</td>
+                     <td>6 min</td>
+                     <td>-</td>
+                  </tr>
+               </table>
+            </div>
+         </div>
+
+         <div class="row mb-huge">
+            <div class="col-12">
+               <table>
+                  <tr>
+                     <td><img src="image/page3/icons/cart.png" alt="Shopping" class="small-image"></td>
+                     <td><h3>Shopping</h3></td>
+                  </tr>
+                  <tr>
+                     <td></td>
+                     <td><p class="text-bold">Grocery stores, malls & retail outlets in your property area</p></td>
+                  </tr>
+               </table>
+               
+            </div>
+            <div class="col-12 mb-large">
+               <img src="image/page3/maps/shopping.jpg" alt=" Shopping Map" class="img-fluid map-image">
+            </div>
+
+            <div class="col-12">
+               <table class="secondary-table">
+                  <tr>
+                     <th class="text-bold">No.</th>
+                     <th class="text-bold">Destination</th>
+                     <th class="text-bold">Distance</th>
+                     <th><img src="image/page3/icons/car.png" alt="Car"></th>
+                     <th><img src="image/page3/icons/cycling.png" alt="Cycle"></th>
+                  </tr>
+                  <tr>
+                     <td>1</td>
+                     <td>Aldi</td>
+                     <td>500 m</td>
+                     <td>1 min</td>
+                     <td>2 min</td>
+                  </tr>
+                  <tr>
+                     <td>2</td>
+                     <td>Alnatura</td>
+                     <td>1.2 km</td>
+                     <td>1 min</td>
+                     <td>2 min</td>
+                  </tr>
+                  <tr>
+                     <td>3</td>
+                     <td>Rewe</td>
+                     <td>300 m</td>
+                     <td>1 min</td>
+                     <td>2 min</td>
+                  </tr>
+                  <tr>
+                     <td>4</td>
+                     <td>DM</td>
+                     <td>1.2 km</td>
+                     <td>1 min</td>
+                     <td>2 min</td>
+                  </tr>
+                  <tr>
+                     <td>5</td>
+                     <td>Meena</td>
+                     <td>1.1 km</td>
+                     <td>1 min</td>
+                     <td>2 min</td>
+                  </tr>
+               </table>
+            </div>
+         </div>
+
+         <div class="row mb-huge">
+            <div class="col-12">
+               <table>
+                  <tr>
+                     <td><img src="image/page3/icons/education.png" alt="Education" class="small-image"></td>
+                     <td><h3>Education</h3></td>
+                  </tr>
+                  <tr>
+                     <td></td>
+                     <td><p class="text-bold">Schools, higher educational and training facilities in your property area</p></td>
+                  </tr>
+               </table>
+               
+            </div>
+            <div class="col-12 mb-large">
+               <img src="image/page3/maps/education.jpg" alt="Education Map" class="img-fluid map-image">
+            </div>
+
+            <div class="col-12">
+               <table class="secondary-table">
+                  <tr>
+                     <th class="text-bold">No.</th>
+                     <th class="text-bold">Destination</th>
+                     <th class="text-bold">Distance</th>
+                     <th><img src="image/page3/icons/car.png" alt="Car"></th>
+                     <th><img src="image/page3/icons/cycling.png" alt="Cycle"></th>
+                  </tr>
+                  <tr>
+                     <td>1</td>
+                     <td>Kindergarten</td>
+                     <td>500 m</td>
+                     <td>1 min</td>
+                     <td>2 min</td>
+                  </tr>
+                  <tr>
+                     <td>2</td>
+                     <td>Gymnasium 1</td>
+                     <td>500 m</td>
+                     <td>1 min</td>
+                     <td>2 min</td>
+                  </tr>
+                  <tr>
+                     <td>3</td>
+                     <td>Gymnasium 2</td>
+                     <td>500 m</td>
+                     <td>1 min</td>
+                     <td>2 min</td>
+                  </tr>
+                  <tr>
+                     <td>4</td>
+                     <td>Wall St English</td>
+                     <td>500 m</td>
+                     <td>1 min</td>
+                     <td>2 min</td>
+                  </tr>
+                  <tr>
+                     <td>5</td>
+                     <td>MBHS</td>
+                     <td>500 m</td>
+                     <td>1 min</td>
+                     <td>2 min</td>
+                  </tr>
+               </table>
+            </div>
+         </div>
+
+         <div class="row mb-huge">
+            <div class="col-12">
+               <table>
+                  <tr>
+                     <td><img src="image/page3/icons/health.png" alt="Health" class="small-image"></td>
+                     <td><h3>Health</h3></td>
+                  </tr>
+                  <tr>
+                     <td></td>
+                     <td><p class="text-bold">Medical, dental and emergency services in your property area</p></td>
+                  </tr>
+               </table>
+               
+            </div>
+            <div class="col-12 mb-large">
+               <img src="image/page3/maps/health.jpg" alt="Health Map" class="img-fluid map-image">
+            </div>
+
+            <div class="col-12">
+               <table class="secondary-table">
+                  <tr>
+                     <th class="text-bold">No.</th>
+                     <th class="text-bold">Destination</th>
+                     <th class="text-bold">Distance</th>
+                     <th><img src="image/page3/icons/car.png" alt="Car"></th>
+                     <th><img src="image/page3/icons/cycling.png" alt="Cycle"></th>
+                  </tr>
+                  <tr>
+                     <td>1</td>
+                     <td>Hospital 1</td>
+                     <td>500 m</td>
+                     <td>1 min</td>
+                     <td>2 min</td>
+                  </tr>
+                  <tr>
+                     <td>2</td>
+                     <td>Doctor 1</td>
+                     <td>500 m</td>
+                     <td>1 min</td>
+                     <td>2 min</td>
+                  </tr>
+                  <tr>
+                     <td>3</td>
+                     <td>Hospital 2</td>
+                     <td>500 m</td>
+                     <td>1 min</td>
+                     <td>2 min</td>
+                  </tr>
+                  <tr>
+                     <td>4</td>
+                     <td>Doctor 2</td>
+                     <td>500 m</td>
+                     <td>1 min</td>
+                     <td>2 min</td>
+                  </tr>
+                  <tr>
+                     <td>5</td>
+                     <td>Doctor 3</td>
+                     <td>500 m</td>
+                     <td>1 min</td>
+                     <td>2 min</td>
+                  </tr>
+               </table>
+            </div>
+         </div>
+
+         <div class="row mb-huge">
+            <div class="col-12">
+               <table>
+                  <tr>
+                     <td><img src="image/page3/icons/gym.png" alt="Fitness" class="small-image"></td>
+                     <td><h3>Fitness</h3></td>
+                  </tr>
+                  <tr>
+                     <td></td>
+                     <td><p class="text-bold">Gyms, sports facilities, training studios and more in your property area</p></td>
+                  </tr>
+               </table>
+               
+            </div>
+            <div class="col-12 mb-large">
+               <img src="image/page3/maps/fitness.jpg" alt="Fitness Map" class="img-fluid map-image">
+            </div>
+
+            <div class="col-12">
+               <table class="secondary-table">
+                  <tr>
+                     <th class="text-bold">No.</th>
+                     <th class="text-bold">Destination</th>
+                     <th class="text-bold">Distance</th>
+                     <th><img src="image/page3/icons/car.png" alt="Car"></th>
+                     <th><img src="image/page3/icons/cycling.png" alt="Cycle"></th>
+                  </tr>
+                  <tr>
+                     <td>1</td>
+                     <td>Freddys Gym</td>
+                     <td>500 m</td>
+                     <td>1 min</td>
+                     <td>2 min</td>
+                  </tr>
+                  <tr>
+                     <td>2</td>
+                     <td>Yoga Palace</td>
+                     <td>500 m</td>
+                     <td>1 min</td>
+                     <td>2 min</td>
+                  </tr>
+                  <tr>
+                     <td>3</td>
+                     <td>Muay Thai Studio</td>
+                     <td>500 m</td>
+                     <td>1 min</td>
+                     <td>2 min</td>
+                  </tr>
+                  <tr>
+                     <td>4</td>
+                     <td>McFit</td>
+                     <td>500 m</td>
+                     <td>1 min</td>
+                     <td>2 min</td>
+                  </tr>
+                  <tr>
+                     <td>5</td>
+                     <td>SBC</td>
+                     <td>500 m</td>
+                     <td>1 min</td>
+                     <td>2 min</td>
+                  </tr>
+               </table>
+            </div>
+         </div>
+
+         <div class="row mb-huge">
+            <div class="col-12">
+               <table>
+                  <tr>
+                     <td><img src="image/page3/icons/restaurant.png" alt="Top-rated Restaurants" class="small-image"></td>
+                     <td><h3>Top-rated Restaurants</h3></td>
+                  </tr>
+                  <tr>
+                     <td></td>
+                     <td><p class="text-bold">Top-rated<sub><a href="#top-rated">3</a></sub> restaurants in your property area</p></td>
+                  </tr>
+               </table>
+               
+            </div>
+            <div class="col-12 mb-large">
+               <img src="image/page3/maps/restaurants.jpg" alt="Restaurants Map" class="img-fluid map-image">
+            </div>
+
+            <div class="col-12">
+               <table class="secondary-table restaurant">
+                  <tr>
+                     <th class="text-bold">No.</th>
+                     <th class="text-bold">Destination</th>
+                     <th class="text-bold">Distance</th>
+                     <th><img src="image/page3/icons/car.png" alt="Car"></th>
+                     <th><img src="image/page3/icons/cycling.png" alt="Cycle"></th>
+                     <th><img src="image/page3/icons/walking.png" alt="Walking"></th>
+                  </tr>
+                  <tr>
+                     <td>1</td>
+                     <td>Restaurant Freddy
+                        Arabic Food
+                     <ul class="stars">
+                        <li><i class="fa fa-star" aria-hidden="true"></i></li>
+                        <li><i class="fa fa-star" aria-hidden="true"></i></li>
+                        <li><i class="fa fa-star" aria-hidden="true"></i></li>
+                        <li><i class="fa fa-star" aria-hidden="true"></i></li>
+                        <li><i class="fa fa-star-half-o" aria-hidden="true"></i></li>
+                     </ul>
+                     </td>
+                     <td>500 m</td>
+                     <td>1 min</td>
+                     <td>2 min</td>
+                     <td>-</td>
+                  </tr>
+                  <tr>
+                     <td>2</td>
+                     <td>Van Hoa
+                        Vietnamese 
+                     <ul class="stars">
+                        <li><i class="fa fa-star" aria-hidden="true"></i></li>
+                        <li><i class="fa fa-star" aria-hidden="true"></i></li>
+                        <li><i class="fa fa-star" aria-hidden="true"></i></li>
+                        <li><i class="fa fa-star" aria-hidden="true"></i></li>
+                        <li><i class="fa fa-star-half-o" aria-hidden="true"></i></li>
+                     </ul>
+                     </td>
+                     <td>1.3 km</td>
+                     <td>-</td>
+                     <td>2 min</td>
+                     <td>5 min</td>
+                  </tr>
+                  <tr>
+                     <td>3</td>
+                     <td>
+                        Jemeni Restaurant
+                        Jemeni 
+                     <ul class="stars">
+                        <li><i class="fa fa-star" aria-hidden="true"></i></li>
+                        <li><i class="fa fa-star" aria-hidden="true"></i></li>
+                        <li><i class="fa fa-star" aria-hidden="true"></i></li>
+                        <li><i class="fa fa-star" aria-hidden="true"></i></li>
+                        <li><i class="fa fa-star-half-o" aria-hidden="true"></i></li>
+                     </ul>
+                     </td>
+                     <td>600 m</td>
+                     <td>1 min</td>
+                     <td>2 min</td>
+                     <td>-</td>
+                  </tr>
+                  <tr>
+                     <td>4</td>
+                     <td>
+                        Sultan’s Grill
+                        Turkish 
+                     <ul class="stars">
+                        <li><i class="fa fa-star" aria-hidden="true"></i></li>
+                        <li><i class="fa fa-star" aria-hidden="true"></i></li>
+                        <li><i class="fa fa-star" aria-hidden="true"></i></li>
+                        <li><i class="fa fa-star" aria-hidden="true"></i></li>
+                        <li><i class="fa fa-star-half-o" aria-hidden="true"></i></li>
+                     </ul>
+                     </td>
+                     <td>800 m</td>
+                     <td>2 min</td>
+                     <td>5 min</td>
+                     <td>-</td>
+                  </tr>
+                  <tr>
+                     <td>5</td>
+                     <td>
+                        Sultan's Dine
+                        Kacchi 
+                     <ul class="stars">
+                        <li><i class="fa fa-star" aria-hidden="true"></i></li>
+                        <li><i class="fa fa-star" aria-hidden="true"></i></li>
+                        <li><i class="fa fa-star" aria-hidden="true"></i></li>
+                        <li><i class="fa fa-star" aria-hidden="true"></i></li>
+                        <li><i class="fa fa-star-half-o" aria-hidden="true"></i></li>
+                     </ul>
+                     </td>
+                     <td>1.2 km</td>
+                     <td>-</td>
+                     <td>2 min</td>
+                     <td>5 min</td>
+                  </tr>
+               </table>
+            </div>
+         </div>
+
+         <div class="row">
+            <div class="references">
+               <ul class="footnotes">
+                  <li id="footnote1">Property area is defined as your property + 1km radius</li>
+                  <li id="footnote2">Municipality average is calculated by performing 1km radius grid search distributed over your property’s municipality</li>
+                  <li id="footnote3">Top-rated restaurant is defined as a restaurant with a minimum rating of 4.5/5 stars on Google</li>
+               </ul>
+            </div>
+         </div>
+      </div>
+   </section>
+
+   <!-- Page3 End -->
+
+
+   <!-- Page 4 Starts -->
+
+   <section class="page4">
+      <div class="container">
+         <div class="row mb-medium">
+            <div class="col-12">
+               <img src="image/icons/demographics.png" alt="" class="img-fluid mb-normal section-icons">
+               <h1 class="text-uppercase title">4. Demographics & Socioeconomics </h1>
+               <p class="text-uppercase text-bold">Blueberry Analytics does a deep dive analysis on your property area<sub><a href="#footnote4">1</a></sub>  demographics and economics providing insight on the current state of your neighbourhood and how it may develop in the future.</p>
+            </div>
+         </div>
+
+         <div class="row mb-medium">
+            <div class="col-12">
+               <div class="visualisation-box mb-large">
+                  <h4 class="text-uppercase text-bold">Total Population</h4>
+                  <p>Population within 1km radius of property: <span class="text-bold">74,855</span></p>
+                  <p>Total Berlin Population: <span class="text-bold">3,665,173</span></p>
+
+                  <img src="image/page4/map-g.jpg" alt="" class="img-fluid">
+               </div>
+
+               <div class="visualisation-box mb-large">
+                  <h4 class="text-uppercase text-bold">Population Density</h4>
+                  <!-- <canvas id="popdensity"></canvas> -->
+                  <div class="chartbox">
+                     <div id="popdensity" style="height: 600px;"></div>
+                  </div>
+               </div>
+
+               <div class="visualisation-box mb-large">
+                  <h4 class="text-uppercase text-bold">Gender Demographics</h4>
+                  <div class="row">
+                     <div class="col-6">
+                        <!-- <canvas id="genderchart1"></canvas> -->
+                        <div class="chartbox">
+                           <div id="genderchart1" style="height: 500px;"></div>
+                        </div>
+                     </div>
+                     <div class="col-6">
+                        <!-- <canvas id="genderchart2"></canvas> -->
+                        <div class="chartbox">
+                           <div id="genderchart2" style="height: 500px;"></div>
+                        </div>
+                     </div>
+                  </div>
+                  
+               </div>
+
+               <div class="visualisation-box mb-large">
+                  <h4 class="text-uppercase text-bold">Age Distribution</h4>
+                  <!-- <canvas id="agedist"></canvas> -->
+                  <div class="chartbox">
+                     <div id="agedist" style="height: 600px;"></div>
+                  </div>
+               </div>
+
+               <div class="visualisation-box mb-large">
+                  <h4 class="text-uppercase text-bold">Household Size</h4>
+                  <!-- <canvas id="household"></canvas> -->
+                  <div class="chartbox">
+                     <div id="household" style="height: 600px;"></div>
+                  </div>
+               </div>
+
+               <div class="visualisation-box mb-large">
+                  <h4 class="text-uppercase text-bold">Marital Status</h4>
+                  <!-- <canvas id="marital"></canvas> -->
+                  <div class="chartbox">
+                     <div id="marital" style="height: 600px;"></div>
+                  </div>
+               </div>
+
+               <div class="visualisation-box mb-large">
+                  <h4 class="text-uppercase text-bold">Foreign Population</h4>
+                  <!-- <canvas id="foreignpop"></canvas> -->
+                  <div class="chartbox">
+                     <div id="foreignpop" style="height: 600px;"></div>
+                  </div>
+               </div>
+
+               <div class="visualisation-box mb-large">
+                  <h4 class="text-uppercase text-bold">Foreigner Heritage</h4>
+                  <!-- <canvas id="foreignerher"></canvas> -->
+                  <div class="chartbox">
+                     <div id="foreignerher" style="height: 600px;"></div>
+                  </div>
+               </div>
+
+               <div class="visualisation-box mb-large">
+                  <h4 class="text-uppercase text-bold">Rent vs. Own</h4>
+                  <!-- <canvas id="rent"></canvas> -->
+                  <div class="row">
+                     <div class="col-6">
+                        <!-- <canvas id="genderchart1"></canvas> -->
+                        <div class="chartbox">
+                           <div id="rentchart1" style="height: 500px;"></div>
+                        </div>
+                     </div>
+                     <div class="col-6">
+                        <!-- <canvas id="genderchart2"></canvas> -->
+                        <div class="chartbox">
+                           <div id="rentchart2" style="height: 500px;"></div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+
+               <div class="visualisation-box mb-large">
+                  <h4 class="text-uppercase text-bold">Salary Distribution</h4>
+                  <!-- <canvas id="salary"></canvas> -->
+                  <div class="chartbox">
+                     <div id="salary" style="height: 600px;"></div>
+                  </div>
+               </div>
+
+               <div class="visualisation-box mb-large">
+                  <h4 class="text-uppercase text-bold">Purchasing Power Per Capita ( € /Person )</h4>
+                  <!-- <canvas id="powerper"></canvas> -->
+                  <div class="chartbox">
+                     <div id="powerper" style="height: 600px;"></div>
+                  </div>
+               </div>
+
+               <div class="visualisation-box mb-large">
+                  <h4 class="text-uppercase text-bold">Unemployment (%)</h4>
+                  <!-- <canvas id="powerper"></canvas> -->
+                  <div class="chartbox">
+                     <div id="unemployment" style="height: 600px;"></div>
+                  </div>
+               </div>
+
+               <div class="visualisation-box mb-large">
+                  <h4 class="text-uppercase text-bold">Total Number of Businesses</h4>
+                  <p>Total # Companies in Berlin :  <span class="text-bold">182,582</span></p>
+                  <!-- map -->
+                  <img src="image/page4/map-g.jpg" alt="" class="img-fluid">
+               </div>
+
+               <div class="visualisation-box mb-large">
+                  <h4 class="text-uppercase text-bold">Commercial Density : Businesses/km<sup>2</sup></h4>
+                  <!-- <canvas id="comdensity"></canvas> -->
+                  <div class="chartbox">
+                     <div id="comdensity" style="height: 600px;"></div>
+                  </div>
+               </div>
+
+               <div class="visualisation-box mb-large">
+                  <h4 class="text-uppercase text-bold">Business Size Distribution</h4>
+                  <!-- <canvas id="businesssize"></canvas> -->
+                  <div class="row">
+                     <div class="col-6">
+                        <!-- <canvas id="genderchart1"></canvas> -->
+                        <div class="chartbox">
+                           <div id="businesssize1" style="height: 500px;"></div>
+                        </div>
+                     </div>
+                     <div class="col-6">
+                        <!-- <canvas id="genderchart2"></canvas> -->
+                        <div class="chartbox">
+                           <div id="businesssize2" style="height: 500px;"></div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+
+         <div class="row">
+            <div class="references">
+               <ul class="footnotes">
+                  <li id="footnote4">Property Area is defined as your property + 1km radius</li>
+                  <li id="footnote5">Municipality average is calculated by performing 1km radius grid search distributed over your property’s municipality</li>
+               </ul>
+            </div>
+         </div>
+      </div>
+   </section>
+
+   <!-- Page 4 End -->
+
+
+   <!-- Page 5 Start -->
+
+   <section class="page5">
+      <div class="container">
+         <div class="row mb-medium">
+            <img src="image/icons/sensitivity.png" alt="" class="img-fluid mb-normal section-icons">
+            <h1 class="text-uppercase title">5. Real Estate Attribute Sensitivity Analysis</h1>
+            <p class="text-uppercase text-bold">Blueberry Analytics analyzes real estate in Berlin to model how property attributes (other than location) contribute to the overall valuation.</p>
+         </div>
+         <div class="row mb-huge">
+            <div class="col-12">
+               <!-- <canvas id="page5chart"></canvas> -->
+               <div class="chartbox">
+                  <div id="page5chart" style="height: 600px;"></div>
+               </div>
+            </div>
+         </div>
+
+         <div class="row mb-huge">
+            <div class="col-12">
+               <h3 class="text-uppercase text-bold mb-medium">Property Data</h3>
+               <ul class="properties">
+                  <li><span class="highlight">65 m<sup>2</sup></span></li>
+                  <li><span class="highlight">3 Rooms</span></li>
+                  <li><span class="highlight">4th Floor</span></li>
+                  <li><span class="highlight">Newly Renovated</span></li>
+                  <li><span class="highlight">Luxurious</span></li>
+                  <li><span class="highlight">1 Bathroom</span></li>
+                  <li><span class="highlight">Balcony</span></li>
+                  <li><span class="highlight">Storage</span></li>
+               </ul>
+            </div>
+         </div>
+
+         <div class="row">
+            <div class="col-12">
+               <h3 class="text-uppercase text-bold mb-medium">Further Information</h3>
+
+               <p>Blueberry Analytics price estimate is our best approximation of the expected purchase price for this property in the current market situation. Blueberry Analytics rent forecast is accordingly the market rent we expect. A large number of the recorded characteristics are taken into account as well as data and meta-data collected about the location of the property.</p>
+
+               <p>Blueberry Analytics price and rent estimates are determined using an automatic statistical method that combines all available information. According to this forecast, the sales price or rent will most likely be in the range shown. Since purchase and rental prices are freely agreed between the contracting parties, there is no guarantee that a corresponding price will be realized. Legal restrictions, such as the so-called "rent cap", are also not taken into account other than the price action reflected directly from the data.</p>
+
+               <h4 class="text-uppercase mb-normal">Data sources</h4>
+               <p>Publicly and privately available sources are used as the data basis for the calibration of the statistical procedure. Several million data records are already available, and the number is rising. We employ 3rd party real estate demographic data vendors, namely Empirica Systems<sup><a href="#reference1">1</a></sup>  and ESRI<sup><a href="#reference2">2</a></sup>  demographics, to keep our database current. Property data and meta-data is updated at each customer report request. Municipality data is updated monthly. </p>
+
+               <h4 class="text-uppercase mb-normal">Consideration of property features</h4>
+               <p>All characteristics for which we have sufficient data are taken into account. Features for which little or no data are available cannot be taken into account, just as features that have not been recorded. You can find an overview of the recorded characteristics under "Property data". </p>
+
+               <h4 class="text-uppercase mb-normal">Statistical Methodology</h4>
+               <p>Using K-means clustering, regression analysis and machine learning. Minimum 30 comparable data points per valuation. Sensitivity analysis based on all data from the municipality for better generalization.</p>
+
+               <h4 class="text-uppercase">No market value determination</h4>
+               <p class=" mb-huge">Please note that this is not a determination of market value in the sense of § 194 BauGB. The procedure used here is purely data-based and does not require any manual adjustments. Nevertheless, it can make sense to have the property appraised by an expert and, if necessary, have an expert report drawn up. If you are looking for an expert in your area, please contact our support. We are happy to help you: <a href="mailto:support@blueberryanalytics.io"> support@blueberryanalytics.io</a></p>
+
+               <div class="references">
+                  <ul>
+                     <li><a href="https://www.empirica-systeme.de/en/">https://www.empirica-systeme.de/en/</a></li>
+                     <li><a href="https://www.esri.com/en-us/arcgis/products/data/data-portfolio/demographics">https://www.esri.com/en-us/arcgis/products/data/data-portfolio/demographics</a></li>
+                  </ul>
+               </div>
+            </div>
+         </div>
+      </div>
+   </section>
+
+
+   <!-- JS File -->
+   <script src="js/app.js"></script>
+
+
+
+
+
+
+
+
+   <script>
+
+window.addEventListener('scroll',function() {
+
+   const navbar = document.querySelector('#default-header');
+
+   const logo = document.querySelector('#default-header img');
+
+   const scrolled = window.scrollY;
+
+   if(scrolled > 20){
+      navbar.classList.add('demo-class');
+      logo.setAttribute('src', 'https://staging4.sebrichards.ca/wp-content/uploads/2020/10/logo-dark.svg');
+   } else if (scrolled < 20){
+      navbar.classList.remove('demo-class');
+      logo.setAttribute('src', 'https://staging4.sebrichards.ca/wp-content/uploads/2020/09/logo-white.svg');
+   }
+});
+
+
+
+
+
+
+      // element that will be wrapped
+let el1 = document.querySelector('.homepage-tab .eael-advance-tabs .eael-tabs-nav ul li.active-default img');
+let el2 = document.querySelector('.homepage-tab .eael-advance-tabs .eael-tabs-nav ul li.inactive img');
+
+
+
+// create wrapper container
+let wrapper1 = document.createElement('div');
+
+// add class to wrapper div
+wrapper1.className = 'image-wrapper1';
+
+// create wrapper container
+let wrapper2 = document.createElement('div');
+
+// add class to wrapper div
+wrapper2.className = 'image-wrapper2';
+
+// insert wrapper before el in the DOM tree
+el1.parentNode.insertBefore(wrapper1, el1);
+el2.parentNode.insertBefore(wrapper2, el2);
+
+// move el into wrapper
+wrapper1.appendChild(el1);
+wrapper2.appendChild(el2);
+
+   </script>
+
+
+
+</body>
+</html>
+
+
